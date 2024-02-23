@@ -17,7 +17,6 @@ export default function App() {
 
     return initialState;
   });
-  console.log(state);
 
   const updateFeedback = (feedbackType) => {
     setState({
