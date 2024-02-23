@@ -1,6 +1,6 @@
 import css from "./Feedback.module.css";
 
-export default function Feedback({ value }) {
+export default function Feedback({ value, totalFeedback, round }) {
   const { good, neutral, bad } = value;
 
   return (
@@ -16,10 +16,10 @@ export default function Feedback({ value }) {
           <p className={css.listText}>Bad: {bad}</p>
         </li>
         <li className={css.item}>
-          <p className={css.listText}>Total: {}</p>
+          <p className={css.listText}>Total: {totalFeedback}</p>
         </li>
       </ul>
-      <p className={css.text}>Positive: {}%</p>
+      <p className={css.text}>Positive: {round}%</p>
     </div>
   );
 }
