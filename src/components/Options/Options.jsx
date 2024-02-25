@@ -25,7 +25,7 @@ export default function Options({
           Bad
         </button>
       </li>
-      {totalFeedback ? (
+      {totalFeedback && (
         <li>
           <button
             className={css.button}
@@ -36,8 +36,6 @@ export default function Options({
             Reset
           </button>
         </li>
-      ) : (
-        ""
       )}
     </ul>
   );

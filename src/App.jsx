@@ -34,7 +34,7 @@ export default function App() {
   }, [state]);
 
   const totalFeedback = state.good + state.neutral + state.bad;
-  const round = Math.round(
+  const positiveFeedbackPercentage = Math.round(
     ((state.good + state.neutral) / totalFeedback) * 100
   );
   return (
@@ -51,7 +51,11 @@ export default function App() {
       />
 
       {totalFeedback ? (
-        <Feedback value={state} totalFeedback={totalFeedback} round={round} />
+        <Feedback
+          value={state}
+          totalFeedback={totalFeedback}
+          round={positiveFeedbackPercentage}
+        />
       ) : (
         <Notification text={"No feedback yet"} />
       )}
